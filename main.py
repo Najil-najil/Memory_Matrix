@@ -1,3 +1,42 @@
+
+#  MEMORY MATRIX - FINAL PROJECT
+
+# 1️. Modules needed
+    # random
+    # time
+    # tkinter
+
+# 2️. Create a function named `show_symbol(x, y)`:
+    # Show symbol on button click
+    # If first click ➝ store position
+    # If second click ➝ check match
+        # If matched ➝ disable both
+        # If not matched ➝ hide after delay
+    # If all pairs matched ➝ call close_game()
+
+# 3️. Create a function named `close_game()`:
+    # Show success message
+    # Destroy current game window
+    # Call play_again()
+
+# 4️. Create a function named `start_game()`:
+    # Initialize variables
+    # Create main game window (Tk)
+    # Shuffle and assign 24 symbols (12 pairs)
+    # Create 6x4 grid of buttons
+    # Launch mainloop()
+
+# 5️. Create a function named `play_again()`:
+    # Ask user in terminal if they want to play again (y/n)
+        # If yes ➝ restart game using start_game()
+        # If no ➝ exit with a goodbye message
+
+# 6️. Main program:
+    # Show welcome message
+    # Ask if user wants to play or quit
+    # Start game based on input
+
+
 import random
 import time
 from tkinter import Tk, Button, DISABLED, messagebox
@@ -66,7 +105,7 @@ def start_game():
         for y in range(4):
             button = Button(
                 command=lambda x=x, y=y: show_symbol(x, y),
-                width=5,
+                width=5, # size of gird
                 height=4,
                 font=large_font
             )
